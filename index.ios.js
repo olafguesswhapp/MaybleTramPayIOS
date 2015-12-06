@@ -9,6 +9,7 @@ var {
   View,
 } = React;
 
+var Intro = require('./Components/Intro');
 var SelectRate = require('./Components/SelectRate');
 var SelectBrand = require('./Components/SelectBrand');
 var ShowAd = require('./Components/ShowAd');
@@ -18,13 +19,19 @@ var TopBar = require('./Components/TopBar');
 var MableIOS = React.createClass({
 
   renderScene: function(route, navigator){
-    if ('SelectRate' === route.id) {
+    if ('Intro' === route.id) {
       return (
         <View style={{flex: 1}}>
           <TopBar nav={navigator} displBackIcon={false} />
+          <Intro nav={navigator} />
+        </View>
+      );
+    } else if ('SelectRate' === route.id) {
+      return (
+        <View style={{flex: 1}}>
+          <TopBar nav={navigator} displBackIcon={true} />
           <SelectRate nav={navigator} />
         </View>
-
       );
     } else if ('SelectBrand' === route.id) {
       return (
@@ -56,7 +63,7 @@ var MableIOS = React.createClass({
         style={styles.container}  
         renderScene ={this.renderScene}
         initialRoute={{
-          id: 'SelectRate',
+          id: 'Intro',
           index: 0,
         }} />
     );

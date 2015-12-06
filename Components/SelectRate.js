@@ -3,6 +3,7 @@
 var React = require('react-native');
 
 var {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -41,7 +42,6 @@ var SelectRate = React.createClass({
         </ScrollView>
         <Text style={styles.welcome}>powered by Mable-Tech</Text>
       </View>
-
     );
   }
 });
@@ -62,6 +62,7 @@ var styles = StyleSheet.create({
     color: '#59C99E',
     textAlign: 'center',
     margin: 10,
+    
   },
   scrollView:{
     flex: 1,
