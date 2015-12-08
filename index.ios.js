@@ -11,7 +11,7 @@ var {
 
 var Intro = require('./Components/Intro');
 var SelectRate = require('./Components/SelectRate');
-var SelectBrand = require('./Components/SelectBrand');
+var SelectBrand = require('./Components/SelectBrand2');
 var ShowAd = require('./Components/ShowAd');
 var ShowTicket = require('./Components/ShowTicket');
 var TopBar = require('./Components/TopBar');
