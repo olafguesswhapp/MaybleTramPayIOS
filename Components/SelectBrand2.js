@@ -19,7 +19,7 @@ brandMaterial: 'https://www.youtube.com/embed/-gMjPezr8TY?rel=0&autoplay=1&showi
 {name: 'QPoints',
 brandSelected: false,
 icon: require('../resources/images/brand4.png'),
-brandMaterial:'https://www.youtube.com/embed/A-8HrBKTaXU?autoplay=1&showinfo=0&controls=1'},
+brandMaterial:'http://fast.wistia.net/embed/iframe/h6wco1pvey'},
 {name: 'RedBull',
 brandSelected: false,
 icon: require('../resources/images/brand3.png'),
@@ -48,14 +48,13 @@ var SelectBrand2 = React.createClass({
     	this.setState({
 	    	brandMaterial: brandSelection[index].brandMaterial
 	    });
-
     }
     console.log('brand was clicked:');
     console.log(brandSelection[index]);
   },
 
   _onContinue: function(){
-  	if (this.state.brandMaterial){
+    if (this.state.brandMaterial){
   		this.props.nav.push({
 	      id: 'ShowAd',
 	      brandMaterial: this.state.brandMaterial
